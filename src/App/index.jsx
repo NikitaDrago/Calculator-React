@@ -1,6 +1,5 @@
 import React, { Suspense, useCallback, useEffect, useState } from 'react'
 import { Switch, Route } from 'react-router-dom'
-
 import { HOME_PAGE_ROUTE, SETTINGS_PAGE_ROUTE } from '@/constants'
 import { ThemeProvider } from 'styled-components'
 import Header from '@/components/Header'

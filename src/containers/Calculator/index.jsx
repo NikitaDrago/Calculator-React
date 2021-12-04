@@ -1,5 +1,4 @@
 import React, { useCallback } from 'react'
-
 import { Display } from '@/components/Display'
 import History from '@/components/History'
 import { Keypad } from '@/components/Keypad'

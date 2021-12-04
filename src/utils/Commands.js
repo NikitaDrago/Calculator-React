@@ -31,11 +31,13 @@ export const Commands = function(operation, valueToAdd, valueToOperation) {
 
   this.execute = currentValue => {
     const newValue = this.addCommand.execute(currentValue)
+
     return this.multiplyCommand.execute(newValue)
   }
 
   this.undo = currentValue => {
     const newValue = this.multiplyCommand.undo(currentValue)
+
     return this.addCommand.undo(newValue)
   }
 }
