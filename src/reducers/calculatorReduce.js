@@ -1,3 +1,5 @@
+import { CLEAR_HISTORY, SET_DISPLAY, SET_HISTORY, SET_INITVALUE, SET_OPERATION, SET_THEME, SET_VALUE } from '@/constants/actions'
+
 const initState = {
   value: '',
   history: [],
@@ -9,37 +11,37 @@ const initState = {
 
 export default function calculatorReduce(state = initState, action) {
   switch (action.type) {
-    case 'SET_VALUE':
+    case SET_VALUE:
       return {
         ...state,
         value: action.payload,
       }
-    case 'SET_HISTORY':
+    case SET_HISTORY:
       return {
         ...state,
         history: [...state.history, action.payload],
       }
-    case 'CLEAR_HISTORY':
+    case CLEAR_HISTORY:
       return {
         ...state,
         history: action.payload,
       }
-    case 'SET_DISPLAY':
+    case SET_DISPLAY:
       return {
         ...state,
         display: action.payload,
       }
-    case 'SET_OPERATION':
+    case SET_OPERATION:
       return {
         ...state,
         operation: action.payload,
       }
-    case 'SET_INITVALUE':
+    case SET_INITVALUE:
       return {
         ...state,
         initValue: action.payload,
       }
-    case 'SET_THEME':
+    case SET_THEME:
       return {
         ...state,
         theme: action.payload,

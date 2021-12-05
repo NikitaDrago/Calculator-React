@@ -1,4 +1,4 @@
-import React, { Suspense, useCallback, useEffect, useState } from 'react'
+import React, { Suspense, useCallback, useEffect } from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { HOME_PAGE_ROUTE, SETTINGS_PAGE_ROUTE } from '@/constants'
 import { ThemeProvider } from 'styled-components'
@@ -42,22 +42,22 @@ export const App = () => {
   }, [])
 
   return (
-    <ThemeProvider theme={getTheme(theme)}>
-      <Suspense fallback={<Loader />}>
-        <Header />
-        <Switch>
-          <Route
-            exact
-            path={HOME_PAGE_ROUTE}
-            component={HomePage}
-          />
-          <Route
-            exact
-            path={SETTINGS_PAGE_ROUTE}
-            component={startSettingsPage}
-          />
-        </Switch>
-      </Suspense>
-    </ThemeProvider>
+  <ThemeProvider theme={getTheme(theme)}>
+    <Suspense fallback={<Loader />}>
+      <Header />
+      <Switch>
+        <Route
+          exact
+          path={HOME_PAGE_ROUTE}
+          component={HomePage}
+        />
+        <Route
+          exact
+          path={SETTINGS_PAGE_ROUTE}
+          component={startSettingsPage}
+        />
+      </Switch>
+    </Suspense>
+  </ThemeProvider>
   )
 }
